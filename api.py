@@ -12,7 +12,7 @@ def get_items():
 def add_item():
     data = request.get_json()
     items.append(data)
-    return jsonify(data), 205
+    return jsonify(data), 201
 
 @api.route('/items/<int:index>', methods=['PUT'])
 def update_item(index):
